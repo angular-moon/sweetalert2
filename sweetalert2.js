@@ -1117,7 +1117,7 @@
               radioLabelSpan.innerHTML = inputOptions[radioValue];
               radioLabel.appendChild(radioInput);
               radioLabel.appendChild(radioLabelSpan);
-              radioLabel.for = radioInput.id;
+              radioLabel['for'] = radioInput.id;
               radio.appendChild(radioLabel);
             }
             _show(radio);
@@ -1380,7 +1380,7 @@
 
   if (typeof Promise === 'function') {
     Promise.prototype.done = Promise.prototype.done || function() {
-      return this.catch(function() {
+      return this['catch'](function() {
         // Catch promise rejections silently.
         // https://github.com/limonte/sweetalert2/issues/177
       });
