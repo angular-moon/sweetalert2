@@ -1289,6 +1289,10 @@
    * Add modal + overlay to DOM
    */
   sweetAlert.init = function() {
+    //不支持getElementsByClassName直接返回, fix ie8加载bug
+    if(!document.getElementsByClassName){
+      return;
+    }
     if (typeof document === 'undefined') {
       console.log('SweetAlert2 requires document to initialize');
       return;
