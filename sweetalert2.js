@@ -8,6 +8,13 @@
   (global.Sweetalert2 = factory());
 }(this, function () { 'use strict';
 
+  var msie = parseInt((/msie (\d+)/.exec(navigator.userAgent.toLowerCase()) || [])[1], 10);
+  if (isNaN(msie)) {
+    msie = parseInt((/trident\/.*; rv:(\d+)/.exec(navigator.userAgent.toLowerCase()) || [])[1], 10);
+  }
+  if(msie && msie < 10)
+    return;
+
   var swalPrefix = 'swal2-';
 
   var prefix = function(items) {
