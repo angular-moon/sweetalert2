@@ -4,7 +4,7 @@
  */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(['es6-promise', 'css!sweetalert2.css'], factory) :
+  typeof define === 'function' && define.amd ? define(['es6-promise', 'sweetalert2.css'], factory) :
   (global.Sweetalert2 = factory());
 }(this, function () { 'use strict';
 

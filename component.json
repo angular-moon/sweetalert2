@@ -4,7 +4,6 @@
     "name": "sweetalert2",
     "main": "sweetalert2.js",
     "dependencies": [
-        "css",
         "es6-promise"
     ]
 }
